@@ -18,5 +18,19 @@ async function getAllPokemon() {
 }
 
 getAllPokemon().then(allPokemon => {
-    console.log(allPokemon[0])
+    let samplePokemon = allPokemon[0]
+    console.log(samplePokemon)
+    document.body.innerHTML = `
+        <div class="a-pokemon">
+            <div class="a-pokemon-id">${samplePokemon.id}</div>
+            
+            <div class="a-pokemon-name">${samplePokemon.name.english}</div>
+            <div class="a-pokemon-type">${samplePokemon.type.join(' / ')}</div>
+            
+            <div class="a-pokemon-stat">${samplePokemon.base.HP}</div>
+            <div class="a-pokemon-stat">${samplePokemon.base.Attack}</div>
+            <div class="a-pokemon-stat">${samplePokemon.base.Defense}</div>
+            <div class="a-pokemon-stat">${samplePokemon.base.Speed}</div>
+        </div>
+    `
 })
