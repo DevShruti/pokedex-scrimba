@@ -14,8 +14,9 @@
 async function getAllPokemon() {
     let response = await fetch("pokemon.json")
     let data = await response.json()
-    
-    console.log(data)
+    return data    
 }
 
-getAllPokemon()
+getAllPokemon().then(allPokemon => {
+    console.log(allPokemon[0])
+})
