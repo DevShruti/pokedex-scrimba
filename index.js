@@ -27,10 +27,10 @@ getAllPokemon().then(allPokemon => {
             <div class="a-pokemon-name">${samplePokemon.name.english}</div>
             <div class="a-pokemon-type">${samplePokemon.type.join(' / ')}</div>
             
-            <div class="a-pokemon-stat">${samplePokemon.base.HP}</div>
-            <div class="a-pokemon-stat">${samplePokemon.base.Attack}</div>
-            <div class="a-pokemon-stat">${samplePokemon.base.Defense}</div>
-            <div class="a-pokemon-stat">${samplePokemon.base.Speed}</div>
+            <div class="a-pokemon-stat">HP: ${samplePokemon.base.HP}</div>
+            <div class="a-pokemon-stat">Attack: ${samplePokemon.base.Attack}</div>
+            <div class="a-pokemon-stat">Defense: ${samplePokemon.base.Defense}</div>
+            <div class="a-pokemon-stat">Speed: ${samplePokemon.base.Speed}</div>
         </div>
     `
 })
